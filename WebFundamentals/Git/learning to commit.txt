@@ -1,0 +1,153 @@
+A001XAOP:gittest juf$ git init
+Initialized empty Git repository in /Users/juf/Desktop/gittest/.git/
+A001XAOP:gittest juf$ git add .
+A001XAOP:gittest juf$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   aboutMe.txt
+	new file:   index.html
+	new file:   styles.css
+
+A001XAOP:gittest juf$ git commit -m "initial commit"
+[master (root-commit) c510ff5] initial commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+A001XAOP:gittest juf$ vim aboutMe.txt 
+A001XAOP:gittest juf$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   aboutMe.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+A001XAOP:gittest juf$ git commit -a
+Aborting commit due to empty commit message.
+A001XAOP:gittest juf$ git add .
+A001XAOP:gittest juf$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   aboutMe.txt
+
+A001XAOP:gittest juf$ git commit -m "wrote a bio in aboutMe.txt"
+[master 601048a] wrote a bio in aboutMe.txt
+ 1 file changed, 1 insertion(+)
+A001XAOP:gittest juf$ git revert
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+A001XAOP:gittest juf$ git status
+On branch master
+nothing to commit, working tree clean
+A001XAOP:gittest juf$ git log
+commit 601048a401bbe60e8da866c6bec9f1f61d6b53f3 (HEAD -> master)
+Author: hackerbyhobby <hackerbyhobby@gmail.com>
+Date:   Mon Apr 2 23:19:56 2018 -0700
+
+    wrote a bio in aboutMe.txt
+
+commit c510ff55b78b1fbd566f466f9e738c0961b9b3d8
+Author: hackerbyhobby <hackerbyhobby@gmail.com>
+Date:   Mon Apr 2 23:17:46 2018 -0700
+
+    initial commit
+A001XAOP:gittest juf$ git revert 601048a401bbe60e8da866c6bec9f1f61d6b53f3
+[master c7b7aa5] Revert "wrote a bio in aboutMe.txt"
+ 1 file changed, 1 deletion(-)
+A001XAOP:gittest juf$ git revert -n 601048a401bbe60e8da866c6bec9f1f61d6b53f3
+A001XAOP:gittest juf$ status
+-bash: status: command not found
+A001XAOP:gittest juf$ git status
+On branch master
+You are currently reverting commit 601048a.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+A001XAOP:gittest juf$ git commit -m "reverted"
+On branch master
+You are currently reverting commit 601048a.
+
+nothing to commit, working tree clean
+A001XAOP:gittest juf$ git status
+On branch master
+You are currently reverting commit 601048a.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+A001XAOP:gittest juf$ git status
+On branch master
+You are currently reverting commit 601048a.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --abort" to cancel the revert operation)
+
+nothing to commit, working tree clean
+A001XAOP:gittest juf$ vim aboutMe.txt 
+A001XAOP:gittest juf$ cat aboutMe.txt 
+I enjoy photography, wine, and long walks on the beach.
+A001XAOP:gittest juf$ git add aboutMe.txt 
+A001XAOP:gittest juf$ git commit -m 'updated aboutMe'
+[master 7e90ddc] updated aboutMe
+ 1 file changed, 1 insertion(+)
+A001XAOP:gittest juf$ vim aboutMe.txt 
+A001XAOP:gittest juf$ git add aboutMe.txt 
+A001XAOP:gittest juf$ git commit -m 'added favorite movie to aboutMe'
+[master 2f4ae85] added favorite movie to aboutMe
+ 1 file changed, 1 insertion(+)
+A001XAOP:gittest juf$ git log
+commit 2f4ae854d9d2c8293c554a2ea23ed51c29df3b60 (HEAD -> master)
+Author: hackerbyhobby <hackerbyhobby@gmail.com>
+Date:   Mon Apr 2 23:24:37 2018 -0700
+
+    added favorite movie to aboutMe
+
+commit 7e90ddc1e2f9715a5b541f1a6eae1dedfbcb278f
+Author: hackerbyhobby <hackerbyhobby@gmail.com>
+Date:   Mon Apr 2 23:23:52 2018 -0700
+
+    updated aboutMe
+
+commit c7b7aa5362c6dbd66f38741f60c8564809e7c047
+Author: hackerbyhobby <hackerbyhobby@gmail.com>
+Date:   Mon Apr 2 23:21:29 2018 -0700
+
+    Revert "wrote a bio in aboutMe.txt"
+    
+    This reverts commit 601048a401bbe60e8da866c6bec9f1f61d6b53f3.
+
+A001XAOP:gittest juf$ git revert -n 2f4ae854d9d2c8293c554a2ea23ed51c29df3b60
+A001XAOP:gittest juf$ cat aboutMe.txt 
+I enjoy photography, wine, and long walks on the beach.
+A001XAOP:gittest juf$ vim aboutMe.txt 
+A001XAOP:gittest juf$ git add aboutMe.txt 
+A001XAOP:gittest juf$ git commit -m 'changed my favorite movie to my favorite book in aboutMe'
+[master b379b9a] changed my favorite movie to my favorite book in aboutMe
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+A001XAOP:gittest juf$ 

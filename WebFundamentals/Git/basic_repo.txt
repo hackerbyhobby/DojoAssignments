@@ -1,0 +1,18 @@
+mkdir basic_repo
+cd basic_repo/
+touch file1 file2 file3 readme.md
+vim file1
+vim file2
+vim file3
+vim readme.md
+git add .
+git remote add origin https://github.com/hackerbyhobby/basic_repo.git
+git commit -m "created files and modified"
+git push -u origin master
+vim file2
+vim file3
+vim readme.md
+git add .
+git status
+git commit -m 'updated file2, file3, readme.md'
+git push origin master
