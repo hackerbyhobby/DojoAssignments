@@ -4,179 +4,8 @@
 <title>Portfolio</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-    box-sizing: border-box;
-}
+<link rel="stylesheet" type="text/css" href="portfolio.css">
 
-body {
-  margin: 0;
-}
-
-/* Style the header */
-.header {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: left;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
-
-/* Style the footer */
-.footer {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-}
-
-
-
-/* Create the list item image instead of the regular bullets */
-li.github{
-    list-style: none;
-    display: inline;
- }
-li.github:before{
-    content: '';
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    background-size: 1em;
-    background-image: url('./Portfolio_images/github.png')
- }
-
- /* Create the list item image instead of the regular bullets */
-li.linkedin{
-    list-style: none;
-    display: inline;
- }
-li.linkedin:before{
-    content: '';
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    background-size: 1em;
-    background-image: url('./Portfolio_images/linkedin.png')
- }
-
- /* Create the list item image instead of the regular bullets */
-li.twitter{
-    list-style: none;
-    display: inline;
- }
-li.twitter:before{
-    content: '';
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    background-size: 1em;
-    background-image: url('./Portfolio_images/twitter.png')
- }
-
- /* Create the list item image instead of the regular bullets */
-li.codepen{
-    list-style: none;
-    display: inline;
- }
-li.codepen:before{
-    content: '';
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    background-size: 1em;
-    background-image: url('./Portfolio_images/codepen.png')
- }
-
-
-
-/* align left */
-.alignleft {
-    float: left;
-
-}
-
-/* align right */
-.alignright {
-    float: right;
-
-}
-
-
-
-/* Style the top navigation bar */
-.container {
-    overflow: hidden;
-    background-color: #333;
-    padding: 1%;
-}
-
-/* Style the topnav links */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Create equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 33.3%;
-    background-color: rgb(218, 152, 152);
-    border-color: black;
-    border-style:  solid;
-    border-width: 1px;
-}
-
-.column2 {
-    float: left;
-    width: 50%;
-    height: auto;
-    padding: 0px 1% 10px 1%;
-    background-color: orange;
-    border-color: black;
-    border-style:  solid;
-    border-width: 1px;
-}
-
-div img {
-    max-width: 100%;
-    max-height: 50%;
-    vertical-align: middle;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Color the column headers */
-.column h2 {
-    background-color: rgb(121, 121, 121);
-    color: white;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-    .column {
-        width: 100%;
-    }
-}
-</style>
 </head>
 <body>
 
@@ -193,10 +22,8 @@ div img {
         <div class="column2">
             <h2>About</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-            <p>This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.
-Pretty cool, isn't it?</p>
-            <p>This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.
-        Pretty cool, isn't it?</p>
+            <p>This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified. Pretty cool, isn't it?</p>
+            <p>This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified. Pretty cool, isn't it?</p>
             <p>This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.
                 Pretty cool, isn't it?</p>
             <p>This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.
@@ -228,15 +55,46 @@ Pretty cool, isn't it?</p>
     <div class="row">
             <div class="column">
             <h2>Technologies:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            <ul class="technology">
+                <li ><img src="./Portfolio_images/php.png" alt="PHP logo"></a></li>
+                <li ><img src="./Portfolio_images/codeigniter.png" alt="codeigniter logo"></a></li>
+                <li ><img src="./Portfolio_images/jQuery.png" alt="jQuery logo"></a></li>
+                <li ><img src="./Portfolio_images/ajax.png" alt="ajax logo"></a></li>
+                <li ><img src="./Portfolio_images/mysql.png" alt="mysql logo"></a></li>
+                <li ><img src="./Portfolio_images/html.png" alt="html5 logo"></a></li>
+                <li ><img src="./Portfolio_images/CSS.png" alt="css logo"></a></li>
+                <li ><img src="./Portfolio_images/bootstrap.png" alt="bootstrap logo"></a></li>
+            </ul>
+            <a href="#" class="button">La Mode</a>
             </div>
             <div class="column">
             <h2>Technologies:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            <ul class="technology">
+                <li ><img src="./Portfolio_images/JavaScript.png" alt="JavaScript logo"></a></li>
+                <li ><img src="./Portfolio_images/mongodb.png" alt="mongodb logo"></a></li>
+                <li ><img src="./Portfolio_images/expressjs.png" alt="expressjs logo"></a></li>
+                <li ><img src="./Portfolio_images/angular.png" alt="angular logo"></a></li>
+                <li ><img src="./Portfolio_images/nodejs.png" alt="nodejs logo"></a></li>
+                <li ><img src="./Portfolio_images/HTML.png" alt="html5 logo"></a></li>
+                <li ><img src="./Portfolio_images/CSS.png" alt="css logo"></a></li>
+                <li ><img src="./Portfolio_images/socket.png" alt="socket logo"></a></li>
+            </ul>
+            <a href="#" class="button">Family Contacts</a>
             </div>
             <div class="column">
             <h2>Technologies:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            <ul class="technology">
+                <li ><img src="./Portfolio_images/python.png" alt="python logo"></a></li>
+                <li ><img src="./Portfolio_images/django.png" alt="django logo"></a></li>
+                <li ><img src="./Portfolio_images/d3.png" alt="d3 logo"></a></li>
+                <li ><img src="./Portfolio_images/angular.png" alt="angular logo"></a></li>
+                <li ><img src="./Portfolio_images/sqlite.png" alt="sqlite logo"></a></li>
+                <li ><img src="./Portfolio_images/HTML.png" alt="html5 logo"></a></li>
+                <li ><img src="./Portfolio_images/CSS.png" alt="css logo"></a></li>
+                <li ><img src="./Portfolio_images/JavaScript.png" alt="JavaScript logo"></a></li>
+                <li ><img src="./Portfolio_images/materialize.png" alt="Materialize logo"></a></li>
+            </ul>
+            <a href="#" class="button">fiveEleven</a>
             </div>
         </div>
 </div>
